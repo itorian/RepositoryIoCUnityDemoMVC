@@ -1,0 +1,4 @@
+﻿
+1. In case you need other model or a model similar to data model but quite different maybe few additional properties
+2. Create a new class inside this project only when you need. Not necessarly always.
+3. This project should not reference any other project, keep this totally independent.

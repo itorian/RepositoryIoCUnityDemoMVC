@@ -1,0 +1,6 @@
+﻿
+1. This project will talk to database directly and no other project will have access to database.
+2. All other projects that needs data, should add this project as reference to begin.
+   OR
+   If you using repository, then only repository project can access this project.
+3. This project should not reference any other project, keep this totally independent.

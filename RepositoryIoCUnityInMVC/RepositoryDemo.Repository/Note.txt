@@ -1,0 +1,3 @@
+﻿
+1. This project will reference to database model project only
+2. This method will be used by other UI projects for database operations

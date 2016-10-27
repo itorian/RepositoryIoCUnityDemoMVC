@@ -1,0 +1,8 @@
+﻿
+1. In case you need to convert your model to data model or view model to data model, this project will do the same.
+2. You can use automapper instead, but always recommend to use DTO to have your solution to address non-solvable issues by automapper.
+3. This project will reference to 'RepositoryDemo.Data' as well as 'RepositoryDemo.Model' projects to convert model to data model.
+4. Create a new class inside this project only when you need. Not necessarly always.
+
+Note: I have seen devs using DTO as model or view model, so how you use DTO is up to you. 
+But if you look into really large project, they use DTO to convert data from one model to another model format.
