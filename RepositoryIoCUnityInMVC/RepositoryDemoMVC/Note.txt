@@ -1,7 +1,8 @@
 ﻿
-This project will be using Inversion of Control (IoC), and to implement IOC i will be Unity framework (Unity.Mvc).
-
-There are the following two implementations of Inversion of Control:
-
-1. Dependency Injection - repository and interfaces and then Unity framework in UI projects
-2. Service Locator - using decoupled interface to locate service or data
+1. This project will add reference 
+   'RepositoryDemo.Data', 'RepositoryDemo.DTO', 'RepositoryDemo.Model', 'RepositoryDemo.Repository'
+   The use of reference 'RepositoryDemo.Data' in this project is to enable Unity only in UnityConfig.cs file
+2. This project will be using Inversion of Control (IoC), and to implement IOC i will be Unity framework (Unity.Mvc)
+3. There are the following two implementations of Inversion of Control:
+	i. Dependency Injection - repository and interfaces and then Unity framework in UI projects
+	ii. Service Locator - using decoupled interface to locate service or data

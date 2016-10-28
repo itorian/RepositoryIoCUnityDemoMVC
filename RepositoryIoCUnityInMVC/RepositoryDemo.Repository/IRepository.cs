@@ -2,14 +2,12 @@
 
 namespace RepositoryDemo.Repository
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEnt, in TPk> where TEnt : class
     {
-        IEnumerable<T> GetAll();
-        T Get(int id);
-        T Get(string id);
-        T Add(T item);
-        bool Update(T item);
-        bool Delete(int id);
-        bool Delete(string id);
+        IEnumerable<TEnt> GetAll();
+        TEnt Get(TPk id);
+        TEnt Add(TEnt item);
+        void Remove(TPk id);
+        bool Update(TEnt item);
     }
 }

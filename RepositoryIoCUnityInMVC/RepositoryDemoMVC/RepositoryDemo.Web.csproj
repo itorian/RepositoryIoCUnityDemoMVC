@@ -143,6 +143,14 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RepositoryDemo.Data\RepositoryDemo.Data.csproj">
+      <Project>{5de5db9a-c7f3-4895-b0f1-8f2faabbf51a}</Project>
+      <Name>RepositoryDemo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryDemo.DTO\RepositoryDemo.DTO.csproj">
+      <Project>{05107615-6b0d-49b3-8336-c29ba866c0a8}</Project>
+      <Name>RepositoryDemo.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RepositoryDemo.Model\RepositoryDemo.Model.csproj">
       <Project>{b6077d60-8a7e-4177-bfa8-11d4717953e8}</Project>
       <Name>RepositoryDemo.Model</Name>

@@ -38,7 +38,8 @@ namespace RepositoryDemo.Web.App_Start
             container.LoadConfiguration();
 
             // TODO: Register your types here
-            container.RegisterType<IRepository<Customer>, CustomerRepository>();
+            container.RegisterType<IRepository<Customer, string>, CustomerRepository>();
+
         }
     }
 }

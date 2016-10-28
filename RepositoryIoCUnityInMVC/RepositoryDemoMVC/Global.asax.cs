@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using RepositoryDemo.Web.App_Start;
 using System.Web.Mvc;
 using System.Web.Routing;
-using static RepositoryDemo.Web.App_Start.UnityConfig;
 
 namespace RepositoryDemo.Web
 {
@@ -14,6 +10,9 @@ namespace RepositoryDemo.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // start unity
+            UnityWebActivator.Start();
         }
     }
 }

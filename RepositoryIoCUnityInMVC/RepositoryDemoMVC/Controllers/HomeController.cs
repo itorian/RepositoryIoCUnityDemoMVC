@@ -1,4 +1,4 @@
-﻿using RepositoryDemo.Model;
+﻿using RepositoryDemo.Data;
 using RepositoryDemo.Repository;
 using System.Web.Mvc;
 
@@ -6,16 +6,16 @@ namespace RepositoryDemo.Web.Controllers
 {
     public class HomeController : Controller
     {
-        readonly IRepository<CustomerModel> repository;
+        private IRepository<Customer, string> _customer;
 
-        public HomeController(IRepository<CustomerModel> repository)
+        public HomeController(IRepository<Customer, string> customer)
         {
-            this.repository = repository;
+            _customer = customer;
         }
 
         public ActionResult Index()
         {
-            var data = repository.GetAll();
+            var data = _customer.GetAll();
             return View(data);
         }
     }

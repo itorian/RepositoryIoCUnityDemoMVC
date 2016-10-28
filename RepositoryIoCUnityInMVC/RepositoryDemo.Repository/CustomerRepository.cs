@@ -1,54 +1,48 @@
 ﻿using RepositoryDemo.Data;
-using RepositoryDemo.Model;
-using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace RepositoryDemo.Repository
 {
-    public class CustomerRepository : IRepository<CustomerModel>
+    public class CustomerRepository : IRepository<Customer, string>
     {
-        private Northwind context;
+        public Northwind _context;
 
         public CustomerRepository(Northwind context)
         {
-            this.context = context;
+            _context = context;
         }
 
-        public IEnumerable<CustomerModel> GetAll()
+        public Customer Add(Customer item)
         {
-            // dto
-            throw new NotImplementedException();
+            _context.Customers.Add(item);
+            _context.SaveChanges();
+            return item;
         }
 
-        public CustomerModel Get(int id)
+        public Customer Get(string id)
         {
-            throw new NotImplementedException();
+            return _context.Customers.FirstOrDefault(i => i.CustomerID == id);
         }
 
-        public CustomerModel Add(CustomerModel item)
+        public IEnumerable<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Customers;
         }
 
-        public bool Update(CustomerModel item)
+        public void Remove(string id)
         {
-            throw new NotImplementedException();
+            Customer item = _context.Customers.Find(id);
+            _context.Customers.Remove(item);
+            _context.SaveChanges();
         }
 
-        public bool Delete(int id)
+        public bool Update(Customer item)
         {
-            throw new NotImplementedException();
-        }
-
-        public CustomerModel Get(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(string id)
-        {
-            throw new NotImplementedException();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
+            return true;
         }
     }
 }
