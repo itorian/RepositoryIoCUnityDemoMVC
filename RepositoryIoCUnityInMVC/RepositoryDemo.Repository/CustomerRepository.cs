@@ -1,11 +1,12 @@
 ﻿using RepositoryDemo.Data;
+using RepositoryDemo.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace RepositoryDemo.Repository
 {
-    public class CustomerRepository : IRepository<Customer>
+    public class CustomerRepository : IRepository<CustomerModel>
     {
         private Northwind context;
 
@@ -14,22 +15,23 @@ namespace RepositoryDemo.Repository
             this.context = context;
         }
 
-        public IEnumerable<Customer> GetAll()
+        public IEnumerable<CustomerModel> GetAll()
         {
-            return context.Customers.ToList();
+            // dto
+            throw new NotImplementedException();
         }
 
-        public Customer Get(int id)
+        public CustomerModel Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Customer Add(Customer item)
+        public CustomerModel Add(CustomerModel item)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Customer item)
+        public bool Update(CustomerModel item)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +41,7 @@ namespace RepositoryDemo.Repository
             throw new NotImplementedException();
         }
 
-        public Customer Get(string id)
+        public CustomerModel Get(string id)
         {
             throw new NotImplementedException();
         }

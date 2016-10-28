@@ -50,6 +50,10 @@
       <Project>{5de5db9a-c7f3-4895-b0f1-8f2faabbf51a}</Project>
       <Name>RepositoryDemo.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RepositoryDemo.Model\RepositoryDemo.Model.csproj">
+      <Project>{B6077D60-8A7E-4177-BFA8-11D4717953E8}</Project>
+      <Name>RepositoryDemo.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Note.txt" />
